@@ -1,0 +1,30 @@
+{% include 'header.html' %}
+
+        <div class="one-third column">
+            <h3 class="sub-title">¿Quién?</h3>
+            <p>Mi nombre es Leandro Poblet y soy programador, o al menos eso espero. Me interesa principalmente el desarrollo web, la utilización de APIs, creación de crawlers y programar de la manera más práctica posible. En este momento estoy trabajando todo en Python, pero quién sabe que me depara el futuro. También soy un escritor hobbista y aprendiz de trompeta. Estoy (o al menos espero estar) en el primer año de Licenciatura en informática en la UNLP. Este sitio es un humilde recordatorio de que jamás haré comedia stand-up en mi vida. También quiero ser astronauta, pero no lo sabe nadie.</p>
+        </div>
+
+        <div class="one-third column">
+            <h3 class="sub-title">¿Y en qué andás?</h3>
+            <p>Entre mis ataques de creatividad absoluta y mis semanas de bloqueo creativo (lo cual ocurre más de lo que yo querría) trabajé en varias cosas:</p>
+            <ul class="square">
+                <li><a href="https://github.com/DoctorMalboro/HeyMang/" target="_blank">Hey Mang!</a>: Programita simple para bajar mangas de los lectores online.</li>
+                <li><a href="http://difad.com/" target="_blank">DiFAD</a>: Clases de alemán en zona sur. Me encargo del desarrollo del sitio y la plataforma.</li>
+            </ul>
+        </div>
+    
+        <div class="one-third column">
+            <h3 class="sub-title">¿Y en dónde estás?</h3>
+                <p>Si me buscás, <i>me encontrás por acá</i>:
+                    <ul class="horizontal">
+                        <li><a href="https://twitter.com/DoctorMalboro"><img src="{{ config['STATIC_URL'] }}img/twitter.png" alt="" /></a></li>
+                        <li><a href="http://forrst.me/DoctorMalboro"><img src="{{ config['STATIC_URL'] }}img/forrst.png" alt="" /></a></li>
+                        <li><a href="mailto:leandro@leandropoblet.com"><img src="{{ config['STATIC_URL'] }}img/mail.png" alt="" /></a></li>
+                        <li><a href="/blog/"><img src="{{ config['STATIC_URL'] }}img/blog.png" alt="" /></a></li>
+                    </ul>
+                </p>
+                <p>Y si nada de esto no te convence, tenés un formulario de contacto <a href="#">acá</a> para que puedas dejarme un mensajito.</p>
+        </div>
+    
+{% include 'footer.html' %}

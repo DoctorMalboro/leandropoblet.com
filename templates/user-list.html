@@ -1,0 +1,21 @@
+{% include 'admin-header.html' %}
+
+        <div id="forms" class="eight columns alpha forms">
+            <table border="0" cellspacing="5" cellpadding="5">
+                <tr><th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Staff?</th></tr>
+                {% for user in users%}
+                    <tr><td>{{ user.id }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.is_staff }}</td>
+                    <td><a href="/admin/user/edit/{{ user.username }}/">Edit</a></td>
+                    <td><a href="/admin/user/delete/{{ user.username }}/">Delete</a></td></tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    
+{% include 'admin-footer.html' %}

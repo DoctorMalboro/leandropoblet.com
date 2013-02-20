@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+
+        <div class="sixteen columns">
+            <h1 class="title">{{ user.username }}</h1>
+            
+            <h3 class="sub-title center">Correo electrónico: <a href="mailto:{{ user.email }}">{{ user.email }}</a></h3>
+            
+            <h3 class="sub-title">{{ user.username }}'s posts</h3>
+            
+            <ul class="square">
+                {% for post in user_posts %}
+                    <li><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+{% include 'footer.html' %}

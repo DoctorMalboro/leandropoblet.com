@@ -1,0 +1,19 @@
+{% include 'admin-header.html' %}
+
+        <div id="forms" class="eight columns alpha forms">
+            <form action="" method="POST">
+                <p>Username: <input type="text" value="{{ user.username }}" name="username" /></p>
+
+                <p>Email: <input type="text" value="{{ user.email }}" name="email" /></p>
+                
+                <p>Staff? <select name="staff" size="1">
+                    <option value="0">False</option>
+                    <option value="1">True</option>       
+                </select></p>
+            
+                <p><input type="submit" value="Edit"></p>
+            </form>
+        </div>
+    </div>
+    
+{% include 'admin-footer.html' %}

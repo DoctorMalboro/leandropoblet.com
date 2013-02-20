@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+
+    <div class="sixteen columns">
+        {% if form.errors %}
+        <div class="error">
+            <h3 class="sub-title">Error!</h3>
+            
+            <p>Parece ser que faltan los siguientes campos:</p>
+            <ul>
+            {% for error in form.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    
+        <form method="POST" class="form" action="/contacto/">
+          <p>{{ form.name(placeholder="Nombre") }}</p>
+          <p>{{ form.email(placeholder="Correo Electrónico") }}</p>
+          <p>{{ form.subject(placeholder="Asunto") }}</p>
+          <p>{{ form.text(rows=8, columns=5) }}</p>
+          <p><input type="submit" value="Enviar">
+        </form>
+    </div>
+
+{% include 'footer.html' %}

@@ -1,0 +1,17 @@
+{% include 'admin-header.html' %}
+
+        <div id="forms" class="eight columns alpha forms">
+            <table border="0" cellspacing="5" cellpadding="5">
+                <tr><th>Name</th>
+                <th>Description</th></tr>
+                {% for category in categories %}
+                    <tr><td>{{ category.name }}</td>
+                    <td>{{ category.desc }}</td>
+                    <td><a href="/admin/category/edit/{{ category.name }}/">Editar</a></td>
+                    <td><a href="/admin/category/delete/{{ category.name }}/">Delete</a></td></tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    
+{% include 'admin-footer.html' %}

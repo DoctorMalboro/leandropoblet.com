@@ -1,0 +1,13 @@
+{% include 'header.html' %}
+
+        <div class="sixteen columns">            
+            <ul>
+                <li><h3 class="sub-title center"><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h3>
+                            
+                <p>{{ post.content }}</p>
+                        
+                <div class="info"><b>Creado por:</b> <a href="/user/{{ post.author }}/">{{ post.author }}</a> ~ <b>Fecha:</b> {{ post.creation }} ~ <b>Categoría:</b> <a href="/blog/category/{{ post.category }}/">{{ post.category }}</a> ~ <b>Tags:</b> {{ post.tags }}</li>
+            </ul>
+        </div>
+
+{% include 'footer.html' %}

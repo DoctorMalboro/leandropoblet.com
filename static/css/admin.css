@@ -1,0 +1,129 @@
+@import url(http://fonts.googleapis.com/css?family=Rambla);
+@import url(http://fonts.googleapis.com/css?family=Gilda+Display);
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F5F5F5;
+    font: 14px 'Rambla';
+    /* #EDEDED; */
+}
+
+ul, ul {
+    list-style: none;
+}
+
+a:link, a:visited {
+    color: #777777;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #999999;
+}
+
+.horizontal li {
+    display: inline-block;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+ul.submenu {
+    background: #000 url('../img/twinkle_twinkle.png') repeat;
+    box-shadow: 0 4px 2px -2px #1A1A1A;
+    border-bottom: 1px solid #1C1C1C;
+    color: #CCCCCC;
+    float: left;
+    top: -15px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    list-style: none;
+}
+
+ul.submenu li {
+    display: inline-block;
+    float: right;
+    padding: 2px 10px 0 0;
+}
+
+ul.submenu h3 {
+    margin-top: 0;
+}
+
+ul.submenu a:link, ul.submenu a:hover, ul.submenu a:visited {
+    color: #CCCCCC;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header ul.submenu li:not(:first-child) {
+    float: left;
+}
+.header ul.submenu li:first-child {
+	float: left;
+    border-left: 0 none;
+}
+
+.sidebar {
+    background: #E8E8E8;
+    background: -webkit-gradient(linear, left top, right top, from(#858585), to(#E8E8E8));
+    background: -webkit-linear-gradient(left, #E8E8E8, #858585);
+    background: -moz-linear-gradient(left, #E8E8E8, #858585);
+    background: -ms-linear-gradient(left, #E8E8E8, #858585);
+    background: -o-linear-gradient(left, #E8E8E8, #858585);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    position: absolute;
+    left: 0;
+    z-index: -100;
+    padding-top: 10px;
+    padding-right: 10px;
+    width: auto;
+    height: 100%;
+}
+
+.sidebar h2 {
+    font: 28px 'Gilda Display';
+}
+
+.sidebar a:link, .sidebar a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #000000;
+}
+
+.forms {
+    position: absolute;
+    top: 40px;
+    left: 190px;
+}
+
+.forms input[type=text], .forms input[type=password] {
+    width: 100%;
+    height: 20px;
+    border: 1px solid black;
+    background: none;
+}
+
+.forms textarea {
+    width: 200px;
+    height: 80px;
+    border: 1px solid black;
+    background: none;
+}

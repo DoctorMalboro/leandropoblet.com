@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+
+        <div class="sixteen columns">
+            <h3 class="sub-title center">Cuando no estoy luchando contra el crimen, estoy ocupado en...</h3>
+            
+            <ul>
+                <li>
+                    <h3>Hey Mang!</h3>
+                    
+                    <div class="photo"><img src="{{ config['STATIC_URL'] }}img/hey-mang.png" width="150" height="150" alt="" /><p>El logo de Hey Mang se basa en Wiki-tan.</p></div>
+                    
+                    <p><b>Hey Mang!</b> es un proyecto mío que empezó como un simple programa para descargar manga de sitios online ya que la mayoría de los links hoy en día estaban muertos. Hoy en día soporta 5 sitios con la mejor calidad y la mejor velocidad. Escrito en Python 2, utilizando PyQt, BeautifulSoup y FeedParser tiene muchas funcionalidades interesantes y otras que se pueden agregar.</p>
+                    <p><b>Curiosidad:</b> Descubrí hace poco que el logo que estaba utilizando era Wiki-tan. ¡Perdón Wiki-tan!
+                    <p>El código está en <a href="https://github.com/DoctorMalboro/HeyMang/" target="_blank">GitHub</a> disponible bajo licencia BSD 3-clause.</p>
+                    <br class="clear" />
+                </li>
+                <li>
+                    <h3>DiFAD</h3>
+                    
+                    <div class="photo"><img src="{{ config['STATIC_URL'] }}img/difad.png" alt="" /><p>Deutsch ist für alle da.</p></div>
+                    
+                    <p><b>DiFAD</b> es un sitio de clases de alemán en zona sur. La plataforma fue desarrollada con Django. Tiene un sistema de páginas, un blog y un formulario de contacto para los visitantes con reCAPTCHA como medida anti-spam.</p>
+                    
+                    <p>Si les interesa, pueden entrar a <a href="http://difad.com" target="_blank">DiFAD.com</a> para saber un poco más.</p>
+                    <br class="clear" />
+                </li>
+                <li>
+                    <h3>Literatura</h3>
+                    
+                    <p>No todo para mi es programar y maldecir a Sun por haber adquirido MySQL. También tengo un lado más poético, aunque en realidad es literario. En este momento estoy escribiendo una novela corta llamada <b>Pronóstico 2020</b>, que si las cosas salen bien, ¿Quién sabe? Tal vez sea mejor escritor que programador (seguro soy mejor escritor que comediante). Igualmente tenía planeado llevarlo a una editorial y si me lo rechazan subirlo a la internet gratis y después vender copias físicas (o vender los derechos a Bollywood y que hagan un musical de ella). Los tendré informados mediante mi blog personal, si es que lo empiezo a usar algún día.</p>
+                </li>
+            </ul>
+        </div>
+
+{% include 'footer.html' %}

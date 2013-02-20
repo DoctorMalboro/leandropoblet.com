@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+
+        <div class="four columns alpha">
+            <h3 class="sub-title center">{{ category.name }}</h3>
+            
+            <p>{{ category.desc }}</p>
+            
+        </div>
+    
+        <div class="ten columns omega">            
+            <ul>
+                {% if posts %}
+                    {% for post in posts %}
+                        <li><h3 class="sub-title center"><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h3>
+                            
+                        <p>{{ post.content }}</p>
+                        
+                        <div class="info"><b>Creado por:</b> <a href="/user/{{ post.author }}/">{{ post.author }}</a> ~ <b>Fecha:</b> {{ post.creation }} ~ <b>Categoría:</b> <a href="/blog/category/{{ post.category }}/">{{ post.category }}</a> ~ <b>Tags:</b> {{ post.tags }}</li>
+                    {% endfor %}
+                {% else %}
+                    <li>No posts, no show.</li>
+                {% endif %}
+            </ul>
+        </div>
+
+{% include 'footer.html' %}

@@ -1,0 +1,30 @@
+{% include 'admin-header.html' %}
+
+        <div id="forms" class="eight columns alpha forms">
+            <form action="" method="post">
+                <p><select name="author" size="1">
+                    {% for author in authors %}
+                        <option value="{{ author.username }}">{{ author.username }}</option>
+                    {% endfor %}                    
+                </select></p>
+    
+                <p>Título: <input type="text" name="title" /></p>
+                
+                <p>Contenido: <br /><textarea name="content" rows="8" cols="40"></textarea></p>
+
+                <p>Categorías: <select name="category" size="1">
+                    {% for category in categories %}
+                        <option value="{{ category.name }}">{{ category.name }}</option>
+                    {% endfor %}                    
+                </select></p>
+    
+                <p>Tags: <input type="text" name="tags" /></p>
+                
+                <p>Slug: <input type="text" name="slug" /></p>
+            
+                <p><input type="submit" value="Post"></p>
+            </form>
+        </div>
+    </div>
+    
+{% include 'admin-footer.html' %}

@@ -1,0 +1,14 @@
+{% include 'admin-header.html' %}
+
+        <div id="forms" class="eight columns alpha forms">
+            <form action="" method="post">
+                <p>Nombre: <input type="text" value="{{ category.name }}" name="name" /></p>
+                
+                <p>Descripción: <textarea name="desc" rows="8" cols="40">{{ category.desc }}</textarea></p>
+            
+                <p><input type="submit" value="Edit"></p>
+            </form>
+        </div>
+    </div>
+    
+{% include 'admin-footer.html' %}

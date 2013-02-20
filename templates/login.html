@@ -1,0 +1,13 @@
+{% include 'header.html' %}
+
+        <div class="sixteen columns">
+            {% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+            <form action="/login/" method="post" class="form" accept-charset="utf-8">
+                <p><input type="text" name="username" placeholder="Usuario" /></p>
+                <p><input type="password" name="password" placeholder="Contraseña" /></p>
+            
+                <p><input type="submit" value="Login"></p>
+            </form>
+        </div>
+
+{% include 'footer.html' %}

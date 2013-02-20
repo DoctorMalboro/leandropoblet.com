@@ -1,0 +1,22 @@
+{% include 'admin-header.html' %}
+
+        <div id="forms" class="eight columns alpha forms">
+            <form action="" method="post">
+    
+                <p>Username: <input type="text" name="username" /></p>
+                
+                <p>Email: <input type="text" name="email" /></p>
+                
+                <p>Password: <input type="password" name="password" /></p>
+                
+                <p>Staff? <select name="staff" default="0" size="1">
+                    <option value="0">False</option>
+                    <option value="1">True</option>       
+                </select></p>
+            
+                <p><input type="submit" value="Crear"></p>
+            </form>
+        </div>
+    </div>
+    
+{% include 'admin-footer.html' %}

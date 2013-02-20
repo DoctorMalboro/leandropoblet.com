@@ -1,0 +1,33 @@
+{% include 'header.html' %}
+
+        <div class="four columns alpha">
+            <h3 class="sub-title center">Categorías</h3>
+            <ul class="square">
+                {% if categories %}
+                    {% for category in categories %}
+                        <li><a href="/blog/category/{{ category.name }}/">{{ category.name }}</a></li>
+                    {% endfor %}
+                {% else %}
+                        <li>No categories, move on.</li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class="ten columns omega">
+            <ul>
+                {% if posts %}
+                    {% for post in posts %}
+                        <h3 class="sub-title"><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h3>
+                        <p>{{ post.content }}</p>
+                        
+                        <div class="info"><b>Creado por:</b> <a href="/user/{{ post.author }}/">{{ post.author }}</a> ~ <b>Fecha:</b> {{ post.creation }} ~ <b>Categoría:</b> <a href="/blog/category/{{ post.category }}/">{{ post.category }}</a> ~ <b>Tags:</b> {{ post.tags }}</div>
+                    {% endfor %}
+                {% else %}
+                    <li>No posts, no show.</li>
+                {% endif %}
+            </ul>
+        </div>
+
+<link href="{{ url_for('recent_feed') }}" rel="alternate" title="Recientemente" type="application/atom+xml">
+    
+{% include 'footer.html' %}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Leandro Poblet ~ Administración</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        {% assets 'admin-styles' %}
+            <link rel="stylesheet" href="{{ ASSET_URL }}">
+        {% endassets %}
+    </head>
+    <body>
+
+	<div class="container main">
+
+    <div class="main">
+        <div class="sixteen columns header">
+            <ul class="submenu">
+                <li><h3>Hola {{ session_username }}</h3></li>
+                <li>
+                    <ul>
+                        <li><a href="{{ url_for('index') }}">Volver al sitio</a></li>
+                        <li><a href="{{ url_for('logout') }}">Desloguearse</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="four columns omega sidebar">        
+            <h2>Entradas</h2>
+            <ul>
+                <li><a href="{{ url_for('entry_list') }}">Entradas</a></li>
+                <li><a href="{{ url_for('add_entry') }}">Agregar Entrada</a></li>
+            </ul>
+        
+            <h2>Categorías</h2>
+            <ul>
+                <li><a href="{{ url_for('category_list') }}">Categorías</a></li>
+                <li><a href="{{ url_for('add_category') }}">Agregar Categoría</a></li>
+            </ul>        
+        
+            <h2>Usuarios</h2>
+            <ul>
+                <li><a href="{{ url_for('user_list') }}">Usuarios</a></li>
+                <li><a href="{{ url_for('add_user') }}">Agregar Usuario</a></li>
+            </ul>
+        </div>
